@@ -1,21 +1,22 @@
 ## Quality assurance 
 
-For perform the system test, the pytest library was employed. The tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
+For perform the system tests, the [pytest](https://docs.pytest.org/en/7.1.x/) library was employed. 
+Tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
 
-To test the system operations, two repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) were created.
+Since that tool operates mainly over repositories, we create two dummy repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) for tests.
 
-All the tests execution LOG is available in the HTML format [**here**](https://htmlpreview.github.io/?).
+#### Test log
+All the tests log is available [**here**](https://htmlpreview.github.io/?https://github.com/correiajoao/jmt/blob/main/docs/test_log.html).
 
-### Test packages details
-Each test package have the following responsibilities: 
+### Test Suits
 
-#### test.aggregator
+##### [test.aggregator]()
 - Contains unit tests for the class hunk_element_aggregator.py.
 
   - Procedures tested by this suite
     - Unit tests.
 
-#### test.diff
+##### [test.diff]()
 - Contains unit and integration tests for the classes diff.py and hunk.py.
 
   - Procedures tested by this suite
@@ -23,13 +24,13 @@ Each test package have the following responsibilities:
     - Procedures to extract hunks of changes from diffs.
     - Others.
     
-#### test.element
+##### [test.element]()
 - Contains unit tests for the class code_element.py.
 
   - Procedures tested by this suite
     - Unit tests.
 
-#### test.git
+##### [test.git]()
 - Unit and integration tests for the classes author.py, commit.py, repository.py and file.py.
 
   - Procedures tested by this suite
@@ -44,7 +45,7 @@ Each test package have the following responsibilities:
   
   Obs: some tests in this suit might take a few minutes, since repository clone operation depends on network connection.
 
-#### test.language
+##### [test.language]()
 - Unit tests for the language.py and its subclasses.
   
   - Procedures tested by this suite
@@ -52,7 +53,7 @@ Each test package have the following responsibilities:
     - Procedures to recovery code elements to be collected for the language.
     - Others.
     
-#### test.treesitter
+##### [test.treesitter]()
 - Unit and integration tests for tree_sitter_visitor.py. 
 
   - Procedures tested by this suite
