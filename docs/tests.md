@@ -1,0 +1,62 @@
+## Quality assurance 
+
+For perform the system test, the pytest library was employed. The tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
+
+To test the system operations, two repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) were created.
+
+All the tests execution LOG is available in the HTML format [**here**](https://htmlpreview.github.io/?).
+
+### Test packages details
+Each test package have the following responsibilities: 
+
+#### test.aggregator
+- Contains unit tests for the class hunk_element_aggregator.py.
+
+  - Procedures tested by this suite
+    - Unit tests.
+
+#### test.diff
+- Contains unit and integration tests for the classes diff.py and hunk.py.
+
+  - Procedures tested by this suite
+    - Procedures to compute diffs between files.
+    - Procedures to extract hunks of changes from diffs.
+    - Others.
+    
+#### test.element
+- Contains unit tests for the class code_element.py.
+
+  - Procedures tested by this suite
+    - Unit tests.
+
+#### test.git
+- Unit and integration tests for the classes author.py, commit.py, repository.py and file.py.
+
+  - Procedures tested by this suite
+    - Procedures to clone, delete, and checkout repositories. 
+    - Procedures to manipulate file content.
+    - Procedures to get the list of commits in a repository.
+    - Procedure to get all changed files in a commit.
+    - Procedure to recovery a file content at certain commit.
+    - Procedure to recovery commit's author information.
+    - Procedure to collect commit's date.
+    - Others.
+  
+  Obs: some tests in this suit might take a few minutes, since repository clone operation depends on network connection.
+
+#### test.language
+- Unit tests for the language.py and its subclasses.
+  
+  - Procedures tested by this suite
+    - Procedures to define the target files to be collected for the language.
+    - Procedures to recovery code elements to be collected for the language.
+    - Others.
+    
+#### test.treesitter
+- Unit and integration tests for tree_sitter_visitor.py. 
+
+  - Procedures tested by this suite
+    - Procedures to create a new AST parser for the target language.
+    - Procedures to collect code elements changed between commits.
+    - Others.
+  
