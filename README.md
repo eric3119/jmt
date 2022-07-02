@@ -74,18 +74,61 @@ The tool will provide us the following output:
 
 Looking the output, we can see that one file has change (src/main/java/com/thealgorithms/ciphers/Caesar.java). In this file, there were one interval of changes impacting the line 93 in the left file and the interval 94 to 104 in the right file. For this interval of changes, in the left file a *class* called *Caesar* was impacted. In the right file, a *class* called *Caesar*, a *method* called *bruteforce*, a *for statement* and one *binary expression* were impacted by the changes.
 
-### Installation 
+# User Documentation
+
+### Building 
 
 In order to run this application, install the required packages:
 
-    pip3 install -r requirements.txt
+    pip install -r requirements.txt
 
-Also, if you are a non unix user, install [gnudiff tool](https://www.gnu.org/software/diffutils/). You can run ```diff --version``` to check your installation.
+If you are a non unix user, install [gnudiff tool](https://www.gnu.org/software/diffutils/). You can run ```diff --version``` to check your installation. 
 
-## Documentation
+For unix users, this tool is provided by default no actions are required.
+
+### Testing
+
+### Executing
+
+## Requirements
+
+### Functional
+
+| ID    | Requirement
+|-------| ------------
+| FR01  | The system should clone remote repositories locally.
+| FR02  | The system should delete a local repository, previously cloned (FR01).
+| FR03  | The system should checkout a local repository (FR01), in a specific branch.
+| FR04  | The system should compute the full list of commits in a branch.
+| FR05  | The system should compute information about the author of commits.
+| FR06  | The system should compute modified files in commits.
+| FR07  | The system should be able to create diffs between two version of a file.
+| FR08  | Using diffs (FR07) the system should be able to extract hunks of changes.
+| FR09  | Using parsing libraries the system should build ASTs of source code files.
+| FR010 | The system should be able to navigate over ASTs (FR09), and identify code elements impacted by changes.
+| FR011 | The system should support the alaysis of repositories in Java and Python. 
+| FR012 | The system should produce json files as output, one per commit.
+
+### Non Functional
+
+| ID    | Requirement
+|-------| ------------
+| NFR01 | The system should use the GNUDiff tool to generate diffs between files.
+| NFR02 | The system should use TreeSitter as library for AST parsing.
+| NFR03 | The system should support analysis of Git repositories.
+| NFR04 | The system should be extensible for support repositories in new languages.
+
+
+### Use Case Diagram
+![Use Case Diagram](./docs/use_cases.png)
+
+### Package Diagram
+![Package Diagram](./docs/package.png)
+
+### Class Diagram
+![Class Diagram](./docs/class.png)
 
 ### Troubles
-
 If you face any problem with the *tree-sitter* library, plese delete the folders *tree-sitter-python* and *tree-sitter-java*, and clone it again.
 
     git clone https://github.com/tree-sitter/tree-sitter-python
