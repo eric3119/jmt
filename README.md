@@ -76,7 +76,7 @@ Looking the output, we can see that one file has change (src/main/java/com/theal
 
 # User Documentation
 
-### Building 
+## Building 
 
 In order to run this application, install the required packages:
 
@@ -86,9 +86,11 @@ If you are a non unix user, install [gnudiff tool](https://www.gnu.org/software/
 
 For unix users, this tool is provided by default no actions are required.
 
-### Testing
+## Testing
 
-### Executing
+- [Test Guide and Logs](./docs/tests.md)
+
+## Executing
 
 ## Requirements
 
