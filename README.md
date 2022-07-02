@@ -94,29 +94,29 @@ For unix users, this tool is provided by default no actions are required.
 
 ### Functional
 
-| ID    | Requirement
-|-------| ------------
-| FR01  | The system should clone remote repositories locally.
-| FR02  | The system should delete a local repository, previously cloned (FR01).
-| FR03  | The system should checkout a local repository (FR01), in a specific branch.
-| FR04  | The system should compute the full list of commits in a branch.
-| FR05  | The system should compute information about the author of commits.
-| FR06  | The system should compute modified files in commits.
-| FR07  | The system should be able to create diffs between two version of a file.
-| FR08  | Using diffs (FR07) the system should be able to extract hunks of changes.
-| FR09  | Using parsing libraries the system should build ASTs of source code files.
-| FR010 | The system should be able to navigate over ASTs (FR09), and identify code elements impacted by changes.
-| FR011 | The system should support the alaysis of repositories in Java and Python. 
-| FR012 | The system should produce json files as output, one per commit.
+| ID    | Requirement                                                                                             |
+|-------|---------------------------------------------------------------------------------------------------------|
+| FR01  | The system should clone remote repositories locally.                                                    |
+| FR02  | The system should delete a local repository, previously cloned (FR01).                                  |
+| FR03  | The system should checkout a local repository (FR01), in a specific branch.                             |
+| FR04  | The system should compute the full list of commits in a branch.                                         |
+| FR05  | The system should compute information about the author of commits.                                      |
+| FR06  | The system should compute modified files in commits.                                                    |
+| FR07  | The system should be able to create diffs between two version of a file.                                |
+| FR08  | Using diffs (FR07) the system should be able to extract hunks of changes.                               |
+| FR09  | Using parsing libraries the system should build ASTs of source code files.                              |
+| FR010 | The system should be able to navigate over ASTs (FR09), and identify code elements impacted by changes. |
+| FR011 | The system should support the alaysis of repositories in Java and Python.                               |
+| FR012 | The system should produce json files as output, one per commit.                                         |
 
 ### Non Functional
 
-| ID    | Requirement
-|-------| ------------
-| NFR01 | The system should use the GNUDiff tool to generate diffs between files.
-| NFR02 | The system should use TreeSitter as library for AST parsing.
-| NFR03 | The system should support analysis of Git repositories.
-| NFR04 | The system should be extensible for support repositories in new languages.
+| ID    | Requirement                                                                |
+|-------|----------------------------------------------------------------------------|
+| NFR01 | The system should use the GNUDiff tool to generate diffs between files.    |
+| NFR02 | The system should use TreeSitter as library for AST parsing.               |
+| NFR03 | The system should support analysis of Git repositories.                    |
+| NFR04 | The system should be extensible for support repositories in new languages. |
 
 
 ### Use Case Diagram
