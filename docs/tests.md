@@ -2,6 +2,7 @@
 ## Quality assurance 
 
 To perform the system tests, we employ the [pytest](https://docs.pytest.org/en/7.1.x/) library. 
+
 The tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
 
 Since our tool operates mainly over repositories, we create two dummy repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) for tests.
