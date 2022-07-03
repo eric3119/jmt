@@ -13,7 +13,7 @@ from src.language.language import Language
 class Python(Language):
 
     __CODE_FILE_EXTENSION = ['py']
-    """Default valid Java file extensions"""
+    """Default valid Python file extensions"""
 
     __CODE_ELEMENTS_TO_COLLECT = ['if_statement', 'do_statement', 'for_statement', 'enhanced_for_statement', 'while_statement',
         'binary_expression', 'ternary_expression', 'assert_statement', 'switch_expression', 'switch_block_statement_group',
