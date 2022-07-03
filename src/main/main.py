@@ -2,7 +2,7 @@
 
 To compute data about a target Git repository, the user must set the following constants:
 - LANGUAGE: <Java() or Python()>. This constant indicates the language of the source code in the target repository.
-- REPOSITORY_REMOTE_PATH: <https://github.com/user/repo.git>. This constant indicates the remote path of the target repository.
+- REMOTE_PATH: <https://github.com/user/repo.git>. This constant indicates the remote path of the target repository.
 - BRANCH: <master>. This constant indicates the branch in the target repository that must be analysed.
 
  __author__ = "João Correia"
@@ -29,23 +29,23 @@ def main():
     Collect all data.
     '''
 
-    #COMMIT = ['2a27d09a1716a1a0bc73101fb0a8a864996cd005']
-    #App().collect_commit_subset(REMOTE_PATH, BRANCH, LANGUAGE, COMMIT)
+    #hashs = ['']
+    App().collect_all_file_commit_subset(REMOTE_PATH, BRANCH, LANGUAGE, hashs)
     '''
     Second execution mode.
     Collect data only for specific commits.
     '''
 
-    FILE = ['Calculator.java']
-    #App().collect_file_subset(REMOTE_PATH, BRANCH, LANGUAGE, FILE)
+    #files = ['']
+    #App().collect_all_commit_file_subset(REMOTE_PATH, BRANCH, LANGUAGE, files)
     '''
     Third execution mode.
     Collect data only for specific files.
     '''
 
-    COMMIT = '2a27d09a1716a1a0bc73101fb0a8a864996cd005'
-    FILE = 'src/test/java/com/thealgorithms/maths/PascalTriangleTest.java'
-    App().collect_file_commit(REMOTE_PATH, BRANCH, LANGUAGE, COMMIT, FILE)
+    #hashs = ['']
+    #files = ['']
+    #App().collect_one_file_one_commit(REMOTE_PATH, BRANCH, LANGUAGE, hashs, files)
     '''
     Fourth execution mode.
     Collect data for one file in one commit.

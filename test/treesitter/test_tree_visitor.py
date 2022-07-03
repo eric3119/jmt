@@ -37,7 +37,7 @@ class TestTreeVisitor:
         diff.compute_diff(repository)
         diff.compute_hunks()
 
-        parser = TreeSetup(Java()).parser()
+        parser = TreeSetup(Java(), "").parser()
 
         tree_left = parser.parse(str.encode(file_left.get_raw_content()))
         tree_right = parser.parse(str.encode(file_right.get_raw_content()))
@@ -76,7 +76,7 @@ class TestTreeVisitor:
         diff.compute_diff(repository)
         diff.compute_hunks()
 
-        parser = TreeSetup(Java()).parser()
+        parser = TreeSetup(Java(), "").parser()
 
         tree_left = parser.parse(str.encode(file_left.get_raw_content()))
         tree_right = parser.parse(str.encode(file_right.get_raw_content()))
@@ -132,7 +132,7 @@ class TestTreeVisitor:
         diff.compute_diff(repository)
         diff.compute_hunks()
 
-        parser = TreeSetup(Python()).parser()
+        parser = TreeSetup(Python(), "").parser()
 
         tree_left = parser.parse(str.encode(file_left.get_raw_content()))
         tree_right = parser.parse(str.encode(file_right.get_raw_content()))
@@ -168,7 +168,7 @@ class TestTreeVisitor:
         diff.compute_diff(repository)
         diff.compute_hunks()
 
-        parser = TreeSetup(Python()).parser()
+        parser = TreeSetup(Python(), "").parser()
 
         tree_left = parser.parse(str.encode(file_left.get_raw_content()))
         tree_right = parser.parse(str.encode(file_right.get_raw_content()))
