@@ -1,13 +1,15 @@
+---
 ## Quality assurance 
 
-For perform the system tests, the [pytest](https://docs.pytest.org/en/7.1.x/) library was employed. 
-Tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
+To perform the system tests, we employ the [pytest](https://docs.pytest.org/en/7.1.x/) library. 
+The tests were designed to ensure the tool quality, and guarantee that it meets the requirements and scope.
 
-Since that tool operates mainly over repositories, we create two dummy repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) for tests.
+Since our tool operates mainly over repositories, we create two dummy repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) for tests.
 
 #### Test log
 All the tests log is available [**here**](https://htmlpreview.github.io/?https://github.com/correiajoao/jmt/blob/main/docs/test_log.html).
 
+--- 
 ### Test Suits
 
 ##### [test.aggregator]()
@@ -61,3 +63,4 @@ All the tests log is available [**here**](https://htmlpreview.github.io/?https:/
     - Procedures to collect code elements changed between commits.
     - Others.
   
+---
