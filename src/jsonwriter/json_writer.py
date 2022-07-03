@@ -27,7 +27,7 @@ class JsonWriter():
         :return: Return nothing
         """
         if 'parent' not in self.__out__:
-            self.__out__['parent'] = str(commit.get_current())
+            self.__out__['parent'] = str(commit.get_parent())
 
         if 'date' not in self.__out__:
             self.__out__['date'] = str(commit.get_date())
