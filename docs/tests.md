@@ -6,19 +6,22 @@ The tests were designed to ensure the tool quality, and guarantee that it meets 
 
 Since our tool operates mainly over repositories, we create two dummy repositories ([Java](https://github.com/correiajoao/Java/) and [Python](https://github.com/correiajoao/Python/)) for tests.
 
-#### Test log
+#### Executing
+
+To execute the tests, run in the root directory: ```pytest test/```
+
 All the tests log is available [**here**](https://htmlpreview.github.io/?https://github.com/correiajoao/jmt/blob/main/docs/test_log.html).
 
 --- 
 ### Test Suits
 
-##### [test.aggregator]()
+##### [test.aggregator](https://github.com/correiajoao/jmt/tree/main/test/aggregator)
 - Contains unit tests for the class hunk_element_aggregator.py.
 
   - Procedures tested by this suite
     - Unit tests.
 
-##### [test.diff]()
+##### [test.diff](https://github.com/correiajoao/jmt/tree/main/test/diff)
 - Contains unit and integration tests for the classes diff.py and hunk.py.
 
   - Procedures tested by this suite
@@ -26,13 +29,13 @@ All the tests log is available [**here**](https://htmlpreview.github.io/?https:/
     - Procedures to extract hunks of changes from diffs.
     - Others.
     
-##### [test.element]()
+##### [test.element](https://github.com/correiajoao/jmt/tree/main/test/element)
 - Contains unit tests for the class code_element.py.
 
   - Procedures tested by this suite
     - Unit tests.
 
-##### [test.git]()
+##### [test.git](https://github.com/correiajoao/jmt/tree/main/test/git)
 - Unit and integration tests for the classes author.py, commit.py, repository.py and file.py.
 
   - Procedures tested by this suite
@@ -47,7 +50,7 @@ All the tests log is available [**here**](https://htmlpreview.github.io/?https:/
   
   Obs: some tests in this suit might take a few minutes, since repository clone operation depends on network connection.
 
-##### [test.language]()
+##### [test.language](https://github.com/correiajoao/jmt/tree/main/test/language)
 - Unit tests for the language.py and its subclasses.
   
   - Procedures tested by this suite
@@ -55,7 +58,7 @@ All the tests log is available [**here**](https://htmlpreview.github.io/?https:/
     - Procedures to recovery code elements to be collected for the language.
     - Others.
     
-##### [test.treesitter]()
+##### [test.treesitter](https://github.com/correiajoao/jmt/tree/main/test/treesitter)
 - Unit and integration tests for tree_sitter_visitor.py. 
 
   - Procedures tested by this suite
