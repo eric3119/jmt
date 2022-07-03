@@ -7,7 +7,7 @@ JMT is a multilanguage tool that manages Git repositories, and analyses change b
 
 ## Open Science 
 
-This tool has scientific usage purposes. Thus, below we have some relevant questions and answers for researchers.
+This tool has scientific (but not limited) usage purposes. Thus, below we have some relevant questions and answers for researchers.
 
 (i) What kind of scientific use is the project intended to be used for?
 
