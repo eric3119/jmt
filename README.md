@@ -7,7 +7,7 @@ Through the AST it is possible to identify preciselly the elements that changed 
 
 JMT is a multilanguage tool that manages Git repositories, and analyses changes between commits. Passing just the repository remote path, the tool yields a set of jsons (one per commit) containing: changed files, author informations, hunks of changes, and code elements impacted by the changes in the left file (before the change) and in the right file (after the change).
 
-## Execution example
+## Motivational example
 
 Suppose we would like to examine one single commit (549a27a) in the [repository](https://github.com/correiajoao/Java.git). Looking for code elements impacted by the changes on that commit. 
 
@@ -78,19 +78,60 @@ Looking the output, we can see that one file has change (src/main/java/com/theal
 
 ## Building 
 
-In order to run this application, install the required packages:
+In order to run this application, execute the following steps.
 
-    pip install -r requirements.txt
+1. install the required packages:
 
-If you are a non unix user, install [gnudiff tool](https://www.gnu.org/software/diffutils/). You can run ```diff --version``` to check your installation. 
-
-For unix users, this tool is provided by default no actions are required.
+    ```pip install -r requirements.txt```
+    
+2. Next, in the project root directory, clone the following repositories.
+    ```
+    git clone https://github.com/tree-sitter/tree-sitter-python
+    git clone https://github.com/tree-sitter/tree-sitter-java
+    ```
+    
+3. If you are a non unix user, install [gnudiff tool](https://www.gnu.org/software/diffutils/). You can run ```diff --version``` to check your installation. For unix users, this tool is provided by default, no actions are required.
 
 ## Testing
 
 - [Test Guide and Logs](./docs/tests.md)
 
 ## Executing
+
+To execute this application:
+
+1. Go to the [main file](https://github.com/correiajoao/jmt/blob/main/src/main/main.py) and set the following parammeters.
+- LANGUAGE: assumes the value Java() or Python(). 
+        Indicates the language of the source code in the target repository.
+
+- REMOTE_PATH: the url of the target repository.
+        Indicates the remote path of the target repository.
+
+- BRANCH: the target branch. 
+        Indicates the branch in the repository that must be analysed.
+
+2. Next, in the main method, there were four execution modes (as described in the Use Case Diagram). Choose the one that best fits your needs,              set the parameters file subset or commit subset if exists.
+3. Then run the application.
+
+
+See the example below. In this case we run the second execution mode, analysing only two commits.
+
+```
+        LANGUAGE = Java()
+        REMOTE_PATH = "https://github.com/correiajoao/Java.git"
+        BRANCH = "master"
+
+        def main():
+                hashs = ['2bcae52dce46dab3496fd6dc0b31cbe3716e891c', 'ec1ab53eeacbd9913206bb5ab98c1dd7dfe2ebbe']
+                App().collect_all_file_commit_subset(REMOTE_PATH, BRANCH, LANGUAGE, hashs)
+                '''
+                Second execution mode.
+                Collect data only for specific commits.
+                '''
+
+        if __name__ == "__main__":
+            main()
+```
 
 ## Requirements
 
@@ -129,9 +170,3 @@ For unix users, this tool is provided by default no actions are required.
 
 ### Class Diagram
 ![Class Diagram](./docs/class.png)
-
-### Troubles
-If you face any problem with the *tree-sitter* library, plese delete the folders *tree-sitter-python* and *tree-sitter-java*, and clone it again.
-
-    git clone https://github.com/tree-sitter/tree-sitter-python
-    git clone https://github.com/tree-sitter/tree-sitter-java
