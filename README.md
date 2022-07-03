@@ -150,6 +150,13 @@ This output fragment shows that one file has changed (*src/main/java/com/thealgo
 
 In the left file, a *class* called *Caesar* was impacted. In the right file, a *class* called *Caesar*, a *method* called *bruteforce*, a *for statement*, and one *binary expression* were impacted by the changes.
 
+### Code Elements 
+
+You can verify or change the code elements collected by the tool in the following files:
+
+- [Java](https://github.com/correiajoao/jmt/blob/main/src/language/java.py)
+- [Python](https://github.com/correiajoao/jmt/blob/main/src/language/python.py)
+
 ## Requirements
 
 ### Functional
