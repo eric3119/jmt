@@ -45,24 +45,25 @@ In order to run this application, execute the following steps.
 
 ## Testing
 
-- [Test Guide and Logs](./docs/tests.md)
+- [**Test Guide and Logs**](./docs/tests.md)
 
 ## Executing
 
 To execute this application:
 
 1. Go to the [main file](https://github.com/correiajoao/jmt/blob/main/src/main/main.py) and set the following parammeters.
-- LANGUAGE: assumes the value Java() or Python(). 
+- *LANGUAGE*: assumes the value Java() or Python(). 
         Indicates the language of the source code in the target repository.
 
-- REMOTE_PATH: the url of the target repository.
+- *REMOTE_PATH*: the url of the target repository.
         Indicates the remote path of the target repository.
 
-- BRANCH: the target branch. 
+- *BRANCH*: the target branch. 
         Indicates the branch in the repository that must be analysed.
 
 2. Next, in the main method, there were four execution modes (as described in the Use Case Diagram). Choose the one that best fits your needs,              set the parameters file subset or commit subset if exists.
-3. Then run the application.
+
+4. Then run the application.
 
 
 See the example below. In this case we run the second execution mode, analysing only one commit.
