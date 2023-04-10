@@ -7,7 +7,9 @@
  __email__ = "jcorreia@inf.puc-rio.inf.br"
  __status__ = "Production"
 """
+
 import json
+import os
 
 class JsonWriter():
 
@@ -67,6 +69,6 @@ class JsonWriter():
         :param file_name: The name of the file to be written.
         :return: The file content.
         """
-        file = open(f"../output/{file_name}.json", 'w')
+        file = open(os.path.abspath(f"output/{file_name}.json"), 'w')
         file.write(json.dumps(self.__out__))
         return json.dumps(self.__out__)

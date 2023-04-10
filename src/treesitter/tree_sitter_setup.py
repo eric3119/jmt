@@ -10,14 +10,18 @@ Setup the Tree Sitter (https://tree-sitter.github.io/tree-sitter/) to support th
  __status__ = "Production"
 """
 
-from tree_sitter import Language as LanguageTreeSitter, Parser
-from src.language.language import Language
+import os
+
 from src.language.java import Java
+from src.language.language import Language
 from src.language.python import Python
+from tree_sitter import Language as LanguageTreeSitter
+from tree_sitter import Parser
+
 
 class TreeSetup():
 
-  def __init__(self, language: Language, lib_root_dir="../"):
+  def __init__(self, language: Language, lib_root_dir=os.path.join(os.getcwd(), 'src')):
     """
     Construct a new TreeSetup object, besides initialize the Tree Sitter for the target language.
 
@@ -25,14 +29,19 @@ class TreeSetup():
     :return: Returns nothing.
     """
 
+    paths = []
+
+    if os.path.exists(os.path.join(lib_root_dir, 'tree-sitter-java')):
+      paths.append(os.path.join(lib_root_dir, 'tree-sitter-java'))
+    if os.path.exists(os.path.join(lib_root_dir, 'tree-sitter-python')):
+      paths.append(os.path.join(lib_root_dir, 'tree-sitter-python'))
+
     LanguageTreeSitter.build_library(
       # Store the library in the `src` directory
       lib_root_dir + 'my-languages.so',
-      [
-        lib_root_dir + 'tree-sitter-java',
-        lib_root_dir + 'tree-sitter-python',
-      ]
+      paths
     )
+
 
     self.__language = language
     if isinstance(self.__language, Java):

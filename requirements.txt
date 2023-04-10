@@ -1,2 +1,2 @@
-tree_sitter==0.20.0
+tree_sitter==0.20.1
 pytest==7.1.2

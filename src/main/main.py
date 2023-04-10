@@ -13,13 +13,13 @@ To compute data about a target Git repository, the user must set the following c
  __status__ = "Production"
 """
 
-from src.language.java import Java
+# from src.language.java import Java
 from src.language.python import Python
 from src.main.app import App
 
-LANGUAGE = Java()
-REMOTE_PATH = "https://github.com/correiajoao/Java.git"
-BRANCH = "master"
+LANGUAGE = Python()
+REMOTE_PATH = "https://github.com/pallets/flask.git"
+BRANCH = "main"
 
 def main():
 
@@ -29,14 +29,14 @@ def main():
     Collect all data.
     '''
 
-    #hashs = ['']
+    hashs = ['859d9a9d5c3da114132ec9f0e515e1fa8030f68f']
     App().collect_all_file_commit_subset(REMOTE_PATH, BRANCH, LANGUAGE, hashs)
     '''
     Second execution mode.
     Collect data only for specific commits.
     '''
 
-    #files = ['']
+    # files = ['app.py']
     #App().collect_all_commit_file_subset(REMOTE_PATH, BRANCH, LANGUAGE, files)
     '''
     Third execution mode.
