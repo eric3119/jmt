@@ -79,7 +79,7 @@ class App():
                 print(err)
                 continue
 
-    def collect_all_file_commit_subset(self, remote_path, branch, language: Language, _hashs):
+    def collect_all_file_commit_subset(self, remote_path, branch, language: Language, _hashs) -> dict:
         """
         Second use case, all files in a commit subset.
 
@@ -98,11 +98,12 @@ class App():
             repository.branch_checkout()
         except Exception as err:
             print(err)
-            return
+            return dict()
 
         repository.set_commits(_hashs)
         print(repository)
 
+        response = dict()
         for commit in repository.get_commits():
             try:
                 commit.compute_changed_files(repository)
@@ -141,10 +142,13 @@ class App():
                         output.append(element)
 
                     writer.append(commit, file, output)
-                writer.write(file_name=commit.get_current())
+                # writer.write(file_name=commit.get_current())
+                response[commit.get_current()] = writer.get_buffer()
             except Exception as err:
                 print(err)
                 continue
+        return response
+            
 
     def collect_all_commit_file_subset(self, remote_path, branch, language: Language, _files):
         """

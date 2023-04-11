@@ -62,6 +62,9 @@ class JsonWriter():
                     self.__out__['files'][str(file.get_name())]['hunks'][he.get_hunk().get_id()]['right_touched_elements'] = {}
                 self.__out__['files'][str(file.get_name())]['hunks'][he.get_hunk().get_id()]['right_touched_elements'].update({e.get_id(): {"identifier": e.get_type(), "declaration": e.get_declaration(), "start": e.get_start_position(), "end": e.get_end_position(), "body_preview": e.get_body_preview()}})
 
+    def get_buffer(self):
+        return self.__out__
+
     def write(self, file_name):
         """
         Write the buffer in a file.
